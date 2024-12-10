@@ -1,9 +1,9 @@
-Functional Description
+# Functional Description
 The average function calculates the average of the first k elements of an integer array list. If k exceeds the length of the array, the function averages all elements in the array. If the array is empty or k is 0 or less, the function returns 0.
 
-Functional Test Cases
+## Functional Test Cases
 
-Normal Case:
+### Normal Case:
 Input: k = 3, list = {4, 8, 12, 16}
 Expected Output: (4 + 8 + 12) / 3 = 8
 
@@ -24,8 +24,8 @@ Input: k = -1, list = {1, 2, 3}
 Expected Output: 0
 
 
-Partitions and Partition Test Cases
-Partitions:
+## Partitions and Partition Test Cases
+### Partitions:
 
 Array has fewer elements than k:
 Case: k > list.length
@@ -44,7 +44,7 @@ Case: k = 0 or k < 0
 Example: k = 0, list = {1, 2}
 
 
-Partition Test Cases:
+### Partition Test Cases:
 
 k > list.length:
 Input: k = 4, list = {7, 14}
@@ -63,8 +63,8 @@ Input: k = -2, list = {4, 5}
 Expected Output: 0
 
 
-Boundary Value Test Cases
-Boundary Analysis:
+## Boundary Value Test Cases
+### Boundary Analysis:
 
 Minimum values of k:
 Input: k = 0, list = {1, 2}
@@ -87,12 +87,12 @@ Input: k = 3, list = {10, 20, 30}
 Expected Output: (10 + 20 + 30) / 3 = 20
 
 
-
+## Testing
 There is no problem with the code as it is so instead we will insert an error.
 Instead of using Math.min(k, list.length), we will use Math.max(k, list.length)
 When we have the Case with k > list.length (k = 5, list = {1, 2, 3}) we get an error.
 We try and access a greater length than the array and get an ArrayIndexOutOfBoundsException.
 We can fix the fault and return to no faults.
 
-Code Coverage:
+## Code Coverage:
 Using EclEmma this code achieves a 100% branch coverage.
